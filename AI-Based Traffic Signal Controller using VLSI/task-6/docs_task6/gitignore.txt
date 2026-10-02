@@ -1,0 +1,26 @@
+# ModelSim generated files
+work/
+transcript
+modelsim.ini
+
+# Waveform/database files
+*.wlf
+*.vcd
+*.vpd
+*.ucdb
+
+# Compiled simulator files
+*.mti
+*.mpf
+
+# Temporary files
+*.tmp
+*.bak
+*.log~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Keep the intended simulation log
+!sim/task5_simulation.log
