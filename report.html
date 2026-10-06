@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMTGC Project Report</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <main class="report-page">
+    <div class="container">
+      <a class="back" href="index.html">← Back to AMTGC website</a>
+      <article class="report-card">
+        <p class="kicker">TECHNICAL PROJECT REPORT</p>
+        <h1>AMTGC – Adaptive Multi-Junction Traffic Grid Controller</h1>
+
+        <h2>1. Project Overview</h2>
+        <p>
+          AMTGC is a Verilog HDL-based digital traffic-control system for two coordinated
+          four-way junctions. It combines adaptive traffic-density control, fair pedestrian
+          arbitration, emergency override and green-wave coordination.
+        </p>
+
+        <h2>2. Architecture</h2>
+        <p>
+          The system contains Junction A and Junction B controllers, a reusable generic timer,
+          a shared pedestrian arbiter and a green-wave coordinator. The top-level module
+          <code>amtgc_top</code> integrates these blocks using named port connections.
+        </p>
+
+        <h2>3. RTL Design</h2>
+        <p>
+          The RTL is modular and parameterized. The generic timer provides reusable timing,
+          while the junction controller implements traffic sequencing and adaptive target
+          calculation. Pedestrian arbitration and green-wave synchronization are separated
+          into dedicated modules.
+        </p>
+
+        <h2>4. FSM Design</h2>
+        <p>
+          The junction controller uses seven Moore FSM states: NS Green, NS Yellow,
+          All-Red to EW, EW Green, EW Yellow, All-Red to NS and Pedestrian.
+          Explicit all-red phases provide a safety interval between conflicting directions.
+        </p>
+
+        <h2>5. Adaptive Traffic-Density Control</h2>
+        <p>
+          A 3-bit density input provides levels 0 through 7. The controller computes a green
+          target from a base green time and a per-level extension, then clamps the target to
+          configured minimum and maximum limits. Density is sampled at green-phase entry so
+          an active green phase is not continuously retimed.
+        </p>
+
+        <h2>6. Verification Methodology</h2>
+        <p>
+          Verification uses a self-checking ModelSim testbench with directed scenarios,
+          corner cases and randomized activity. The environment checks valid FSM states,
+          conflicting-green safety, emergency handling, pedestrian grant behavior, adaptive
+          timing, reset and green-wave coordination.
+        </p>
+
+        <h2>7. Simulation Results</h2>
+        <p>
+          The final submitted report should contain the actual ModelSim Transcript and
+          waveform evidence produced by the verified RTL. Replace any placeholder screenshots
+          on the website with the real simulation screenshots before one-time submission.
+        </p>
+
+        <h2>8. Challenges Faced</h2>
+        <p>
+          Key challenges included maintaining a strict top-level hierarchy, handling fair
+          pedestrian arbitration, coordinating green-wave timing, isolating adaptive logic
+          from the generic timer, and diagnosing compile/elaboration and waveform issues
+          during integration.
+        </p>
+
+        <h2>9. Conclusion</h2>
+        <p>
+          AMTGC demonstrates a practical modular RTL architecture for coordinated traffic
+          control. The design combines deterministic FSM sequencing with adaptive timing,
+          fair pedestrian service, emergency safety handling and inter-junction coordination.
+        </p>
+
+        <h2>10. Future Enhancements</h2>
+        <p>
+          Possible extensions include real-time vehicle sensors, camera-based density
+          estimation, FPGA hardware deployment, additional coordinated junctions, emergency
+          vehicle detection and predictive traffic optimization.
+        </p>
+
+        <div class="report-warning">
+          <strong>Submission note:</strong> This web report is a presentation version.
+          For the final internship submission, attach the complete technical report PDF and
+          ensure all claims, screenshots and PASS/FAIL statements match the actual verified
+          simulation output.
+        </div>
+      </article>
+    </div>
+  </main>
+</body>
+</html>
