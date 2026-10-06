@@ -1,0 +1,47 @@
+AMTGC PROFESSIONAL WEBSITE
+==========================
+
+Repository:
+https://github.com/pragadeesh0411/Adaptive-Multi-Junction-Traffic-Grid-Controller
+
+Expected GitHub Pages URL:
+https://pragadeesh0411.github.io/Adaptive-Multi-Junction-Traffic-Grid-Controller/
+
+SETUP
+-----
+1. Upload all files/folders in this package to the root of the GitHub repository.
+2. GitHub -> Settings -> Pages.
+3. Build and deployment -> Deploy from a branch.
+4. Branch: main
+5. Folder: / (root)
+6. Save.
+7. Open the GitHub Pages URL shown by GitHub after deployment.
+
+SCREENSHOTS
+-----------
+Replace the five placeholder SVG files in /screenshots with the REAL ModelSim screenshots.
+Recommended final PNG filenames:
+01_normal_operation.png
+02_pedestrian_fairness.png
+03_emergency_override.png
+04_maximum_density.png
+05_green_wave.png
+
+After uploading the PNGs, edit index.html and change the five image references from .svg to .png.
+
+VIDEO
+-----
+Edit index.html and replace the Demo Video button's current YouTube URL with your final public video URL.
+
+LINKS
+-----
+GitHub Repository:
+https://github.com/pragadeesh0411/Adaptive-Multi-Junction-Traffic-Grid-Controller
+
+GitHub Pages:
+https://pragadeesh0411.github.io/Adaptive-Multi-Junction-Traffic-Grid-Controller/
+
+IMPORTANT
+---------
+Do not use the placeholder waveform images as verification evidence in the final submission.
+Use only your actual ModelSim screenshots and actual final video.
